@@ -36,4 +36,4 @@ build.bat
 
 ## License
 
-This project is licensed under the [BSD 3 license](https://github.com/sbplat/Minecraft-Client-Base/blob/main/LICENSE).
+This project is licensed under the [BSD 3 license](LICENSE).
