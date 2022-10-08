@@ -1,0 +1,29 @@
+name: build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build loader and injector
+      run: |
+        mkdir build && cd build
+        cmake ..
+        cmake --build .
+    - name: Build client
+      run: |
+        cd ../client
+        "build.bat"
+        
+    - uses: actions/upload-artifact@v3
+    - name: Upload artifacts
+      with:
+        path: |
+          build/inject.exe
+          build/loader.dll
+          client/*.class
+          client/*.jar
