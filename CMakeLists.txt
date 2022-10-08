@@ -5,6 +5,7 @@ project(ClientBase VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_BUILD_TYPE Release)
 set(BUILD_SHARED_LIBS ON)
 set(CMAKE_DISABLE_TESTING ON)
+set(CMAKE_CXX_STANDARD 17)
 
 include_directories($ENV{JAVA_HOME}/include)
 include_directories($ENV{JAVA_HOME}/include/win32)
