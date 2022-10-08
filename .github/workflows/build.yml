@@ -14,7 +14,7 @@ jobs:
         cmake ..
         cmake --build .
         cd ../client
-        cmd /c build.bat < nul
+        cmd /c "build.bat < nul"
 
     - uses: actions/upload-artifact@v3
       with:
