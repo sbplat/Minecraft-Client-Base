@@ -8,9 +8,9 @@ set(CMAKE_DISABLE_TESTING ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY $<1:${CMAKE_BINARY_DIR}>)
 
-include_directories($ENV{JAVA_HOME}/include)
-include_directories($ENV{JAVA_HOME}/include/win32)
-link_directories($ENV{JAVA_HOME}/lib)
+find_package(JNI REQUIRED)
+
+include_directories(${JNI_INCLUDE_DIRS})
 
 include_directories(loader/include)
 
@@ -32,7 +32,7 @@ target_include_directories(loader PUBLIC
 )
 
 target_link_libraries(loader PUBLIC -static
-    Jvm
+    ${JNI_LIBRARIES}
 )
 
 add_executable(inject
