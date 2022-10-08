@@ -19,4 +19,5 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         path: |
-          build
+          build/*.exe
+          build/*.dll
