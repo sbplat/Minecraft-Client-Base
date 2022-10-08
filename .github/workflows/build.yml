@@ -21,5 +21,4 @@ jobs:
         path: |
           build/*.exe
           build/*.dll
-          client/*.class
-          client/*.jar
+          client/build

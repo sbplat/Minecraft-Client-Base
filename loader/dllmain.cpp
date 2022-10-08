@@ -54,7 +54,9 @@ void init_thread(HMODULE hModule) {
 
     setClient();  // Set the client and initialize the mapper
 
-    std::map<std::string, std::string> classPaths = {{"inject/client/Client", "/client/Client.class"}};
+    std::map<std::string, std::string> classPaths = {
+        {"inject/client/Client", "/client/build/inject/client/Client.class"}
+    };
 
     std::map<std::string, jclass> loadedClasses = classLoader.LoadClient(classPaths);
 

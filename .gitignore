@@ -1,6 +1,3 @@
 # Build
 /build
-
-# Compiled Java jars and classes
-*.class
-*.jar
+/client/build

@@ -1,1 +1,1 @@
-javac Client.java & pause
+mkdir build & javac -d ./build Client.java & pause
