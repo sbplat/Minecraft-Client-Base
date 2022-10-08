@@ -16,7 +16,7 @@ jobs:
         cd ../client
         "build.bat"
 
-  deploy:
+  upload:
 
     needs: build
     runs-on: windows-latest
