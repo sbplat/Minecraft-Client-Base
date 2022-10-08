@@ -15,7 +15,13 @@ jobs:
         cmake --build .
         cd ../client
         "build.bat"
-        
+
+  deploy:
+
+    needs: build
+    runs-on: windows-latest
+
+    steps:
     - uses: actions/upload-artifact@v3
       with:
         path: build/loader.dll
