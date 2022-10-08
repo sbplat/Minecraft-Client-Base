@@ -9,8 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build loader, injector and client
-      run: |
+    - run: |
         mkdir build && cd build
         cmake ..
         cmake --build .
@@ -18,7 +17,6 @@ jobs:
         "build.bat"
         
     - uses: actions/upload-artifact@v3
-    - name: Upload artifacts
       with:
         path: |
           build/inject.exe
