@@ -40,3 +40,5 @@ add_executable(inject
 
 target_link_libraries(inject PUBLIC -static
 )
+
+install(TARGETS loader inject DESTINATION CMAKE_SOURCE_DIR)
