@@ -18,4 +18,4 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        path: build/loader.dll
+        path: build
