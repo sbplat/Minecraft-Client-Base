@@ -21,3 +21,6 @@ jobs:
         path: |
           build/*.exe
           build/*.dll
+          client
+          !client/*.java
+          !client/build.bat
