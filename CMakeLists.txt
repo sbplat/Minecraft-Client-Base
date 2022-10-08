@@ -30,7 +30,7 @@ target_include_directories(loader PUBLIC
     ${JAVA_HOME}/include
 )
 
-target_link_libraries(loader PUBLIC -static -static-libgcc -static-libstdc++
+target_link_libraries(loader PUBLIC -static
     Jvm
 )
 
@@ -38,5 +38,5 @@ add_executable(inject
     injector/inject.cpp
 )
 
-target_link_libraries(inject PUBLIC -static -static-libgcc -static-libstdc++
+target_link_libraries(inject PUBLIC -static
 )

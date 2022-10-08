@@ -18,8 +18,4 @@ jobs:
         
     - uses: actions/upload-artifact@v3
       with:
-        path: |
-          build/inject.exe
-          build/loader.dll
-          client/*.class
-          client/*.jar
+        path: build/loader.dll
