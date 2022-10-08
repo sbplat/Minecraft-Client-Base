@@ -9,13 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build loader and injector
+    - name: Build loader, injector and client
       run: |
         mkdir build && cd build
         cmake ..
         cmake --build .
-    - name: Build client
-      run: |
         cd ../client
         "build.bat"
         
